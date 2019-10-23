@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <a href="" class="logo">NatureComp</a>
+            <nav>
+                <img src="img/menu.svg" alt="menu">
+            </nav>
+        </header>
+        <h1 class="lax" data-lax-translate-y="0 0, 400 -400">View on Mobile Resolution</h1>
+        <div class="line lax" data-lax-opacity="0 1, 100 0"></div>
+    </div>
+    <div class="container secondary lax" data-lax-translate-y="0 0, 400 -600" data-lax-opacity="0 0, 300 1">
+        <h2>Strategic</h2>
+        <p class="subtext">Aliances</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa beatae earum debitis non ea consectetur et amet itaque, voluptatem iure sit nam vel soluta neque iste repellat nulla eaque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa beatae earum debitis non ea consectetur et amet itaque, voluptatem iure sit nam vel soluta neque iste repellat nulla eaque.</p>
+    </div>
+    <img src="img/mountains.png" alt="mountains"  class="mountains lax" data-lax-translate-y="0 1, 400 -100">
+    <img src="img/forest.png" alt="mountains" class="trees lax" data-lax-translate-y="0 1, 400 -260">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+
+    <script>
+    window.onload = function() {
+	lax.setup() // init
+
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+    
+    </script>
+
+
+</body>
+</html>
